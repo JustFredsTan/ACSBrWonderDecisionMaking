@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wonder Decision-Making Quiz</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .question {
+      margin-bottom: 18px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+    .options label {
+      display: block;
+      margin-bottom: 6px;
+      cursor: pointer;
+    }
+    button {
+      display: block;
+      margin: 24px auto;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 24px;
+      padding: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background: #f9f9f9;
+    }
+    .character-name {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Which <em>Wonder</em> Character Matches Your Decision-Making?</h1>
+  <p>
+    Read each situation and choose the response that feels most like what you would actually do.
+    There are no right or wrong answers. At the end, you&apos;ll see which character from
+    <em>Wonder</em> your decision-making most resembles.
+  </p>
+
+  <form id="quizForm">
+
+    <!-- Q1 -->
+    <div class="question">
+      <p><strong>1. A new classmate joins and looks very different from everyone else. At recess, you…</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q1" value="august">
+          A. Feel nervous but walk over anyway and try to talk to them.
+        </label>
+        <label><input type="radio" name="q1" value="via">
+          B. Notice how they affect the family-like climate of your class and quietly observe before acting.
+        </label>
+        <label><input type="radio" name="q1" value="summer">
+          C. Go up, introduce yourself, and invite them to join your group so they won&apos;t be alone.
+        </label>
+        <label><input type="radio" name="q1" value="savannah">
+          D. Greet them politely only when others are watching, so you still look friendly.
+        </label>
+        <label><input type="radio" name="q1" value="julian">
+          E. Make a comment or joke about them to your friends to show you&apos;re not &quot;weirded out&quot;.
+        </label>
+        <label><input type="radio" name="q1" value="jack">
+          F. Think you should talk to them, but you hesitate because you&apos;re worried what your friends will think.
+        </label>
+        <label><input type="radio" name="q1" value="justin">
+          G. Watch quietly, feel curious about their story, and tell yourself you&apos;ll talk to them when things are less chaotic.
+        </label>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="question">
+      <p><strong>2. You see a classmate being teased behind their back for how they look. You…</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q2" value="august">
+          A. Feel it deeply and imagine how painful it would be for them if they knew.
+        </label>
+        <label><input type="radio" name="q2" value="via">
+          B. Store away who is saying what, and this quietly changes how you see those people.
+        </label>
+        <label><input type="radio" name="q2" value="summer">
+          C. Step in gently, saying something like &quot;That&apos;s not okay,&quot; or changing the subject.
+        </label>
+        <label><input type="radio" name="q2" value="savannah">
+          D. Laugh a little so you still fit in, but make sure you don&apos;t say anything too harsh.
+        </label>
+        <label><input type="radio" name="q2" value="julian">
+          E. Add your own comment or joke, especially if it makes your friends laugh.
+        </label>
+        <label><input type="radio" name="q2" value="jack">
+          F. Go along with it at the time, then feel guilty and think about apologising later.
+        </label>
+        <label><input type="radio" name="q2" value="justin">
+          G. Stay mostly silent, uncomfortable, and later talk one-to-one with the person who was hurt or someone you trust.
+        </label>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="question">
+      <p><strong>3. You&apos;ve been invited to an exclusive party, but your close friend wasn&apos;t. You…</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q3" value="august">
+          A. Feel torn and guilty, and consider not going because you know how they&apos;d feel.
+        </label>
+        <label><input type="radio" name="q3" value="via">
+          B. Think carefully about long-term friendships and whether going will damage trust.
+        </label>
+        <label><input type="radio" name="q3" value="summer">
+          C. Talk honestly to your friend, check how they feel, and try to include them somehow.
+        </label>
+        <label><input type="radio" name="q3" value="savannah">
+          D. Go, because it&apos;s important to stay connected with influential people.
+        </label>
+        <label><input type="radio" name="q3" value="julian">
+          E. Enjoy the invite, joke about the people who weren&apos;t invited, and treat it as normal.
+        </label>
+        <label><input type="radio" name="q3" value="jack">
+          F. Go, but feel bad, and maybe send your friend messages or try to explain later.
+        </label>
+        <label><input type="radio" name="q3" value="justin">
+          G. Choose based on what feels most authentic to you, even if neither option feels completely right.
+        </label>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="question">
+      <p><strong>4. During a group project, one member isn&apos;t pulling their weight. You…</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q4" value="august">
+          A. Worry that confronting them will cause drama, but you still quietly do extra work so the group doesn&apos;t suffer.
+        </label>
+        <label><input type="radio" name="q4" value="via">
+          B. Take on more responsibility yourself and adjust the plan to make sure the project still works.
+        </label>
+        <label><input type="radio" name="q4" value="summer">
+          C. Check in kindly with them to see if something is wrong and try to support them.
+        </label>
+        <label><input type="radio" name="q4" value="savannah">
+          D. Complain about them to others and distance yourself, making sure you don&apos;t look lazy.
+        </label>
+        <label><input type="radio" name="q4" value="julian">
+          E. Publicly call them out, maybe in a harsh or sarcastic way, so everyone sees who&apos;s at fault.
+        </label>
+        <label><input type="radio" name="q4" value="jack">
+          F. Talk to them, but you might soften your words too much and agree to &quot;just finish it together&quot; last minute.
+        </label>
+        <label><input type="radio" name="q4" value="justin">
+          G. Suggest a calm conversation with them or the teacher, so everyone&apos;s side can be heard fairly.
+        </label>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="question">
+      <p><strong>5. A rumour starts about someone you know. You&apos;re one of the first to hear it. You…</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q5" value="august">
+          A. Feel upset that people are talking about them and decide not to spread it any further.
+        </label>
+        <label><input type="radio" name="q5" value="via">
+          B. Observe who is spreading it and why, and only speak when you feel it&apos;s really necessary.
+        </label>
+        <label><input type="radio" name="q5" value="summer">
+          C. Tell the person being targeted so they&apos;re not blindsided, and offer to stand by them.
+        </label>
+        <label><input type="radio" name="q5" value="savannah">
+          D. Stay in the loop, pass on parts of it when useful, but avoid looking like the main source.
+        </label>
+        <label><input type="radio" name="q5" value="julian">
+          E. Use the rumour to boost your own influence, especially if it makes a rival look bad.
+        </label>
+        <label><input type="radio" name="q5" value="jack">
+          F. Share it with a few people, then later regret it when you see the impact.
+        </label>
+        <label><input type="radio" name="q5" value="justin">
+          G. Question whether it&apos;s even true and encourage people to check facts before believing it.
+        </label>
+      </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="question">
+      <p><strong>6. A teacher wrongly scolds you for something you didn&apos;t do. You…</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q6" value="august">
+          A. Feel hurt and embarrassed, but you don&apos;t argue—you just want the moment to end.
+        </label>
+        <label><input type="radio" name="q6" value="via">
+          B. Accept it on the outside but replay it in your mind, thinking about the bigger picture.
+        </label>
+        <label><input type="radio" name="q6" value="summer">
+          C. Try to explain calmly and respectfully, while understanding that teachers also have bad days.
+        </label>
+        <label><input type="radio" name="q6" value="savannah">
+          D. Think about how unfair it is and how this might affect how others see you.
+        </label>
+        <label><input type="radio" name="q6" value="julian">
+          E. Roll your eyes internally, maybe make a sarcastic comment later about how teachers overreact.
+        </label>
+        <label><input type="radio" name="q6" value="jack">
+          F. Feel upset, then look for another chance to show that you&apos;re actually reliable and not like that.
+        </label>
+        <label><input type="radio" name="q6" value="justin">
+          G. Prefer to write an email or talk privately later, where you can explain clearly without an audience.
+        </label>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="question">
+      <p><strong>7. Your close friend starts hanging out more with another group and seems distant. You…</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q7" value="august">
+          A. Worry that something is wrong with you and try not to make things harder for them.
+        </label>
+        <label><input type="radio" name="q7" value="via">
+          B. Step back, observe, and quietly decide how much energy you&apos;ll keep investing.
+        </label>
+        <label><input type="radio" name="q7" value="summer">
+          C. Reach out gently and ask how they&apos;re feeling, leaving space for them to open up.
+        </label>
+        <label><input type="radio" name="q7" value="savannah">
+          D. Shift your attention to other people who keep your image strong and make you feel valued.
+        </label>
+        <label><input type="radio" name="q7" value="julian">
+          E. Feel competitive, maybe say things that turn others against them or their new group.
+        </label>
+        <label><input type="radio" name="q7" value="jack">
+          F. Joke with them about &quot;dumping&quot; you, half serious and half trying to keep the friendship alive.
+        </label>
+        <label><input type="radio" name="q7" value="justin">
+          G. Accept the change with sadness, and look for people who share your values and depth instead.
+        </label>
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="question">
+      <p><strong>8. You overhear someone say something cruel about a person you care about. You…</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q8" value="august">
+          A. Feel a deep ache, and that comment stays with you for a long time.
+        </label>
+        <label><input type="radio" name="q8" value="via">
+          B. Remember exactly who said it and decide if they still deserve your trust.
+        </label>
+        <label><input type="radio" name="q8" value="summer">
+          C. Speak up for the person, or at least make it clear you disagree.
+        </label>
+        <label><input type="radio" name="q8" value="savannah">
+          D. React based on who&apos;s watching—you won&apos;t risk your own image to defend them too strongly.
+        </label>
+        <label><input type="radio" name="q8" value="julian">
+          E. Add your own negative comment, especially if you feel like that person &quot;deserves&quot; it.
+        </label>
+        <label><input type="radio" name="q8" value="jack">
+          F. Say nothing in the moment but later apologise to your friend or show extra kindness to them.
+        </label>
+        <label><input type="radio" name="q8" value="justin">
+          G. Confront the person later in a calm, private way, explaining why their words weren&apos;t okay.
+        </label>
+      </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="question">
+      <p><strong>9. There&apos;s a school camp or retreat. You&apos;re anxious about going. You…</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q9" value="august">
+          A. Decide to go anyway, even if you&apos;re terrified, because you want to be brave.
+        </label>
+        <label><input type="radio" name="q9" value="via">
+          B. Think through all the responsibilities, possible problems, and whether you&apos;re really needed there.
+        </label>
+        <label><input type="radio" name="q9" value="summer">
+          C. Look for one safe person you can stick with, which makes it feel manageable.
+        </label>
+        <label><input type="radio" name="q9" value="savannah">
+          D. Consider how your presence or absence will affect your social status.
+        </label>
+        <label><input type="radio" name="q9" value="julian">
+          E. Think about how you can control the social dynamics there and make them work for you.
+        </label>
+        <label><input type="radio" name="q9" value="jack">
+          F. Go, but tell jokes and act &quot;chill&quot; to hide how nervous you actually are.
+        </label>
+        <label><input type="radio" name="q9" value="justin">
+          G. Ask careful questions, imagine the setting, and decide in a thoughtful way whether the experience fits who you are.
+        </label>
+      </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="question">
+      <p><strong>10. You make a serious mistake that hurts someone else. Afterward, you…</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q10" value="august">
+          A. Replay it over and over in your head and feel a strong urge to make it right.
+        </label>
+        <label><input type="radio" name="q10" value="via">
+          B. Analyse what happened quietly and wait for the right moment to apologise properly.
+        </label>
+        <label><input type="radio" name="q10" value="summer">
+          C. Approach them gently, acknowledge their feelings, and actively work to repair the relationship.
+        </label>
+        <label><input type="radio" name="q10" value="savannah">
+          D. Worry first about how people will see you now and how to protect your reputation.
+        </label>
+        <label><input type="radio" name="q10" value="julian">
+          E. Defend yourself, insist they&apos;re overreacting, or shift the blame away from you.
+        </label>
+        <label><input type="radio" name="q10" value="jack">
+          F. Apologise, even if clumsily, and then try to show through actions that you&apos;ve changed.
+        </label>
+        <label><input type="radio" name="q10" value="justin">
+          G. Prefer to write or message them, where you can explain your thoughts more clearly.
+        </label>
+      </div>
+    </div>
+
+    <!-- Q11 -->
+    <div class="question">
+      <p><strong>11. In a conflict between fairness and fitting in, you usually…</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q11" value="august">
+          A. Side with fairness internally, even if you can&apos;t always show it out loud.
+        </label>
+        <label><input type="radio" name="q11" value="via">
+          B. Think long-term about what is truly right and what this will mean later on.
+        </label>
+        <label><input type="radio" name="q11" value="summer">
+          C. Move towards fairness, especially if someone vulnerable is involved.
+        </label>
+        <label><input type="radio" name="q11" value="savannah">
+          D. Choose the option that keeps you accepted by the &quot;right&quot; people.
+        </label>
+        <label><input type="radio" name="q11" value="julian">
+          E. Choose the side that gives you the most power or control in the situation.
+        </label>
+        <label><input type="radio" name="q11" value="jack">
+          F. Bounce between both, trying not to lose friends on either side.
+        </label>
+        <label><input type="radio" name="q11" value="justin">
+          G. Try to find a less obvious third option that protects both your values and your relationships.
+        </label>
+      </div>
+    </div>
+
+    <!-- Q12 -->
+    <div class="question">
+      <p><strong>12. When you face a big decision that scares you, your typical pattern is…</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q12" value="august">
+          A. Feel terrified but move forward step by step, hoping courage will grow as you go.
+        </label>
+        <label><input type="radio" name="q12" value="via">
+          B. Consider how your choice will affect others who depend on you, and decide from there.
+        </label>
+        <label><input type="radio" name="q12" value="summer">
+          C. Ask: &quot;What is the kindest thing I can do—for myself and others?&quot; and choose that.
+        </label>
+        <label><input type="radio" name="q12" value="savannah">
+          D. Ask: &quot;Which option will make me look strongest or most impressive?&quot; and lean that way.
+        </label>
+        <label><input type="radio" name="q12" value="julian">
+          E. Choose whatever keeps you feeling in control, even if it hurts people.
+        </label>
+        <label><input type="radio" name="q12" value="jack">
+          F. Waver for a while, then finally choose what lets you live with yourself afterwards.
+        </label>
+        <label><input type="radio" name="q12" value="justin">
+          G. Sit with the decision for a while, listening to your gut and your values before acting.
+        </label>
+      </div>
+    </div>
+
+    <button type="button" onclick="calculateResult()">See My Result</button>
+  </form>
+
+  <div id="result" style="display:none;"></div>
+
+  <script>
+    function calculateResult() {
+      const questionNames = [
+        "q1","q2","q3","q4","q5","q6",
+        "q7","q8","q9","q10","q11","q12"
+      ];
+
+      const scores = {
+        august: 0,
+        via: 0,
+        summer: 0,
+        savannah: 0,
+        julian: 0,
+        jack: 0,
+        justin: 0
+      };
+
+      for (const qName of questionNames) {
+        const selected = document.querySelector('input[name="' + qName + '"]:checked');
+        if (!selected) {
+          alert("Please answer all questions before seeing your result.");
+          return;
+        }
+        scores[selected.value] += 1;
+      }
+
+      let maxScore = 0;
+      for (const key in scores) {
+        if (scores[key] > maxScore) maxScore = scores[key];
+      }
+
+      const topCharacters = Object.keys(scores).filter(
+        key => scores[key] === maxScore
+      );
+
+      const descriptions = {
+        august: "Your decisions often come from a place of quiet courage and deep sensitivity. You are aware of how others might feel, and even when you are scared, you often choose to move forward anyway. You carry fear and bravery together, like August.",
+        via: "Your decisions tend to be thoughtful, responsible, and long-term. You notice more than you say, and you often prioritise other people’s needs over your own. Like Via, you may carry a lot quietly and rarely ask for recognition.",
+        summer: "You lean towards kindness when you make decisions. You often move towards those who are left out or hurting, even when it costs you socially. Like Summer, your choices show moral courage and compassion.",
+        savannah: "You are highly aware of image, impression, and social position. Your decisions often consider how you will be seen by others. Like Savannah, you may sometimes choose popularity or safety over authenticity—but you also have the potential to use that awareness for good.",
+        julian: "Your decisions are often about control, strength, and not appearing vulnerable. When uncomfortable, you may react with sarcasm, criticism, or dominance. Like Julian, there is a lot beneath the surface that could change if you faced your own fears honestly.",
+        jack: "Your decision-making balances conscience and the desire to fit in. You care about being a good person, but you also don’t want to lose friends. Like Jack, you sometimes make mistakes, but you are capable of real growth, apology, and loyalty.",
+        justin: "Your decisions are reflective and intuitive. You think about how situations feel beneath the surface and prefer honesty and depth. Like Justin, you may avoid loud drama, but when it matters, you act to protect the people and values you care about."
+      };
+
+      const niceName = {
+        august: "August",
+        via: "Via",
+        summer: "Summer",
+        savannah: "Savannah",
+        julian: "Julian",
+        jack: "Jack",
+        justin: "Justin"
+      };
+
+      const resultDiv = document.getElementById("result");
+      resultDiv.style.display = "block";
+
+      if (topCharacters.length === 1) {
+        const c = topCharacters[0];
+        resultDiv.innerHTML =
+          "<p class='character-name'>Your decision-making is most like " +
+          niceName[c] +
+          ".</p><p>" +
+          descriptions[c] +
+          "</p>";
+      } else {
+        const names = topCharacters.map(c => niceName[c]).join(", ");
+        resultDiv.innerHTML =
+          "<p class='character-name'>You are a mix of: " +
+          names +
+          ".</p><p>Your decisions share patterns with more than one character. You might enjoy revisiting key scenes for these characters in <em>Wonder</em> and asking which of their choices feel closest to your own.</p>";
+      }
+    }
+  </script>
+
+</body>
+</html>
